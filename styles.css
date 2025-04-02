@@ -4,7 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom, #1a1a3d, #5b5b5b); /* Градиент от темно-синего к белому */
+    background: linear-gradient(to bottom, #1a1a3d, #5b5b5b); /* Используем градиент из index.html */
     overflow: auto;
     font-family: 'Arial', sans-serif;
 }
@@ -17,13 +17,14 @@ body {
 
 h1 {
     font-size: 48px;
-    color: #ffffff; /* Белый цвет текста */
-    text-shadow: 0 0 5px #ffffff, 0 0 5px #ffffff, 0 0 30px #00b7ff; /* Эффект свечения */
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #00b7ff; /* Более яркое свечение из watch_styles.css */
     margin-bottom: 40px;
 }
 
+/* Стили для расписания */
 .schedule {
-    background: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон для расписания */
+    background: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -46,6 +47,40 @@ li {
     margin: 10px 0;
 }
 
+/* Стили для iframe-контейнера */
+.iframe-container {
+    position: relative;
+    width: 800px;
+    height: 450px;
+    background: #d3d3d3;
+    border: 10px solid #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+}
+
+.iframe-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Стили для ссылок */
+.link {
+    margin-top: 20px;
+}
+
+.link a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    text-shadow: 0 0 5px #ffffff;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
 /* Звезды на фоне */
 body::before {
     content: '';
@@ -57,10 +92,9 @@ body::before {
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><circle cx="2" cy="2" r="1" fill="white" opacity="0.8"/></svg>') repeat;
     pointer-events: none;
     animation: twinkle 5s infinite;
-    z-index: -1; /* Помещаем звезды под контент */
+    z-index: -1;
 }
 
-/* Анимация мерцания звезд */
 @keyframes twinkle {
     0%, 100% { opacity: 0.5; }
     50% { opacity: 1; }
