@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scheduleList = document.getElementById('schedule-list');
 
     // Загружаем расписание с помощью Fetch API
-    fetch('https://vitalokek2.github.io/test228/расписание.txt')
+    fetch('https://vitalokek2.github.io/test228/расписание_work.txt')
         .then(response => response.text())
         .then(data => {
             // Разбиваем текст на строки
