@@ -15,6 +15,6 @@ for a,b in rasp.items():
     open('расписание.txt', 'a', encoding='UTF-8').write(f'{a};videos/{b}.mp4\n')
 
 
-open('расписание_work.txt', 'w+').write('Ежедневно:\n')
+open('расписание_work.txt', 'w')
 for a,b in rasp.items():
     open('расписание_work.txt', 'a', encoding='UTF-8').write(f'{a} - {b}\n')
