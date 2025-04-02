@@ -4,7 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom, #1a1a3d, #ffffff); /* Градиент от темно-синего к белому */
+    background: linear-gradient(to bottom, #1a1a3d, #5b5b5b); /* Градиент от темно-синего к белому */
     overflow: auto;
     font-family: 'Arial', sans-serif;
 }
